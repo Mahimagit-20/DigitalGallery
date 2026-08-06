@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Akshaya Art Gallery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body data-theme="dark">
+
+  <!-- Ambient animated background -->
+  <div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <!-- Floating top navigation -->
+  <nav class="topnav" id="topnav">
+    <div class="brand" id="brandHome">
+      <div class="brand-mark">🎨</div>
+      <div class="brand-text">
+        <div class="brand-title">AKSHAYA</div>
+        <div class="brand-sub">Art Gallery</div>
+      </div>
+    </div>
+
+    <div class="nav-dots" aria-label="Section navigation">
+      <button class="nav-dot active" data-target="welcome" aria-label="Welcome"></button>
+      <button class="nav-dot" data-target="groups" aria-label="Art Forms"></button>
+      <button class="nav-dot" data-target="categories" aria-label="Collections"></button>
+      <button class="nav-dot" data-target="showcase" aria-label="Artworks"></button>
+    </div>
+
+    <div class="nav-right">
+      <span class="nav-clock" id="navClock">10:30 AM</span>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme">
+        <span class="knob">✦</span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="screen-container" id="screenContainer">
+
+    <!-- ============ WELCOME SCREEN ============ -->
+    <section class="screen" id="welcome" data-screen-name="welcome">
+      <div class="hero-inner">
+        <div class="hero-logo reveal-scale in">🎨</div>
+        <p class="hero-eyebrow reveal in">Discover · Explore · Connect</p>
+        <h1 class="hero-title reveal in">AKSHAYA</h1>
+        <p class="hero-tagline reveal in">Art Gallery</p>
+        <p class="hero-subtitle reveal in">A celebration of traditional and contemporary artistry</p>
+        <div class="scroll-hint">
+          <span>Auto-starting in a moment...</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ART FORMS ============ -->
+    <section class="screen" id="groups" data-screen-name="groups">
+      <div class="section-head reveal">
+        <p class="section-eyebrow">Step One</p>
+        <h2 class="section-title">Art Forms</h2>
+        <p class="section-desc">Explore our curated collections across diverse artistic traditions and mediums.</p>
+      </div>
+      <div class="card-grid" id="groupsGrid"></div>
+      <div class="grid-pager" id="groupsPager" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============ COLLECTIONS ============ -->
+    <section class="screen" id="categories" data-screen-name="categories">
+      <div class="section-head reveal">
+        <button class="back-pill" id="backToGroups" aria-label="Back to Art Forms">
+          <span class="back-icon" aria-hidden="true">←</span>
+          <span class="back-label">Back</span>
+        </button>
+        <p class="section-eyebrow" id="categoryEyebrow">Collection</p>
+        <h2 class="section-title" id="categoryTitle">Explore</h2>
+        <p class="section-desc" id="categoryDesc"></p>
+      </div>
+      <div class="card-grid" id="categoriesGrid"></div>
+      <div class="grid-pager" id="categoriesPager" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============ ARTWORK SHOWCASE ============ -->
+    <section class="screen" id="showcase" data-screen-name="showcase">
+      <div class="section-head reveal" style="margin-bottom:20px;">
+        <button class="back-pill" id="backToCategories" aria-label="Back to Collections">
+          <span class="back-icon" aria-hidden="true">←</span>
+          <span class="back-label">Back</span>
+        </button>
+      </div>
+
+      <div class="showcase-grid reveal">
+        <div class="showcase-info">
+          <p class="product-eyebrow" id="showcaseCategoryLabel">Collection</p>
+          <h1 class="product-name" id="productName">Artwork Title</h1>
+          <p class="product-info" id="productInfo">Artist / Origin</p>
+          <p class="product-desc" id="productDesc">Description goes here.</p>
+          <div class="spec-row" id="specRow"></div>
+          <div class="product-nav">
+            <button class="pnav-btn" id="prevProduct" aria-label="Previous artwork">‹</button>
+            <span class="pnav-count" id="productCount">1 / 1</span>
+            <button class="pnav-btn" id="nextProduct" aria-label="Next artwork">›</button>
+          </div>
+        </div>
+
+        <div class="media-col">
+          <div class="media-stage" id="mediaStage">
+            <div class="media-badge" id="mediaBadge"><span>🖼️</span><span>Photo</span></div>
+            <button class="media-fs-btn" id="mediaFullscreen" aria-label="View fullscreen">⛶</button>
+            <div class="media-caption media-caption-header" id="mediaCaptionHeader"></div>
+            <!-- media slides injected by app.js -->
+            <div class="media-caption media-caption-footer" id="mediaCaptionFooter"></div>
+            <button class="media-jump-btn" id="jumpNextProduct" aria-label="Next artwork">›</button>
+            <div class="media-controls">
+              <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+              <div class="control-row">
+                <div class="control-left">
+                  <button class="mini-btn" id="prevMedia" aria-label="Previous image">‹</button>
+                  <button class="mini-btn" id="nextMedia" aria-label="Next image">›</button>
+                </div>
+                <div class="dot-row" id="mediaDots"></div>
+                <div class="control-right">
+                  <button class="mini-btn" id="mediaPlayPause" aria-label="Pause">⏸</button>
+                  <span class="media-count" id="mediaCount">1 / 1</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="media-desc" id="mediaDesc"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <section class="screen" id="footer" data-screen-name="footer">
+      <p class="footer-brand">AKSHAYA Art Gallery</p>
+      <p>Celebrating the diversity and beauty of artistic expression</p>
+      <p style="margin-top:20px; font-size:.75rem; color:var(--text-2);">Interactive Digital Gallery Experience</p>
+    </section>
+
+  </div>
+
+  <button class="to-top" id="toTop" aria-label="Back to welcome">↑</button>
+
+  <script src="static/js/data.js"></script>
+  <script src="static/js/app.js"></script>
+</body>
+</html>
