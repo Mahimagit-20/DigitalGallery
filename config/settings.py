@@ -26,8 +26,9 @@ SECRET_KEY = 'django-insecure-h1&-348!_s(=p7h^a2)0c72-u(_+(m(sgd&3pk0dhga72tx7+h
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "127.0.0.1",
     "digitalgallery-fa17.onrender.com",
+    "localhost",
+    "127.0.0.1",
 ]
 
 
