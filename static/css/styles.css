@@ -5,26 +5,26 @@
 
 /* ---------- Design tokens ---------- */
 :root{
-  --bg-0:#0a0612;
-  --bg-1:#130b23;
-  --bg-2:#1a0f2e;
-  --surface:rgba(255,255,255,0.045);
-  --surface-hover:rgba(255,255,255,0.075);
-  --border:rgba(168,120,255,0.22);
-  --border-strong:rgba(190,140,255,0.55);
-  --text-0:#f6f3fb;
-  --text-1:#b7add0;
-  --text-2:#7d7396;
-  --violet:#7C5CFC;
-  --purple:#A855F7;
-  --pink:#EC4899;
-  --gradient-brand:linear-gradient(135deg,#7C5CFC 0%,#A855F7 55%,#EC4899 100%);
-  --gradient-bg:radial-gradient(ellipse 80% 60% at 20% -10%, rgba(124,92,252,0.20) 0%, transparent 60%),
-                radial-gradient(ellipse 70% 50% at 90% 10%, rgba(236,72,153,0.14) 0%, transparent 55%),
-                radial-gradient(ellipse 90% 70% at 50% 110%, rgba(168,85,247,0.16) 0%, transparent 60%),
+  --bg-0:#170f08;
+  --bg-1:#1f150c;
+  --bg-2:#2a1d10;
+  --surface:rgba(250,240,215,0.05);
+  --surface-hover:rgba(250,240,215,0.1);
+  --border:rgba(212,175,55,0.28);
+  --border-strong:rgba(212,175,55,0.65);
+  --text-0:#f8f1e0;
+  --text-1:#dcc9a0;
+  --text-2:#a3906b;
+  --violet:#B8860B;
+  --purple:#D4AF37;
+  --pink:#E9C46A;
+  --gradient-brand:linear-gradient(135deg,#B8860B 0%,#D4AF37 50%,#E9C46A 100%);
+  --gradient-bg:radial-gradient(ellipse 80% 60% at 20% -10%, rgba(184,134,11,0.20) 0%, transparent 60%),
+                radial-gradient(ellipse 70% 50% at 90% 10%, rgba(212,175,55,0.14) 0%, transparent 55%),
+                radial-gradient(ellipse 90% 70% at 50% 110%, rgba(233,196,106,0.12) 0%, transparent 60%),
                 linear-gradient(160deg, var(--bg-0) 0%, var(--bg-2) 55%, var(--bg-1) 100%);
-  --shadow-glow:0 0 50px rgba(168,85,247,0.22);
-  --shadow-card: 0 20px 50px rgba(5,2,15,0.45);
+  --shadow-glow:0 0 50px rgba(212,175,55,0.25);
+  --shadow-card: 0 20px 50px rgba(5,2,15,0.5);
   --blur:22px;
   --radius-xl:32px;
   --radius-lg:24px;
@@ -43,25 +43,25 @@
 }
 
 [data-theme="light"]{
-  --bg-0:#f8f6fc;
+  --bg-0:#fefcf6;
   --bg-1:#ffffff;
-  --bg-2:#efe9fb;
-  --surface:rgba(255,255,255,0.65);
-  --surface-hover:rgba(255,255,255,0.9);
-  --border:rgba(124,92,252,0.18);
-  --border-strong:rgba(124,92,252,0.45);
-  --text-0:#241c38;
-  --text-1:#5b5273;
-  --text-2:#8b83a3;
-  --violet:#6D3FF0;
-  --purple:#9333EA;
-  --pink:#DB2777;
-  --gradient-bg:radial-gradient(ellipse 80% 60% at 20% -10%, rgba(124,92,252,0.12) 0%, transparent 60%),
-                radial-gradient(ellipse 70% 50% at 90% 10%, rgba(219,39,119,0.08) 0%, transparent 55%),
-                radial-gradient(ellipse 90% 70% at 50% 110%, rgba(147,51,234,0.10) 0%, transparent 60%),
-                linear-gradient(160deg, var(--bg-1) 0%, var(--bg-2) 60%, #f3eefb 100%);
-  --shadow-glow:0 0 40px rgba(124,92,252,0.14);
-  --shadow-card: 0 16px 40px rgba(90,70,140,0.14);
+  --bg-2:#f6ecd4;
+  --surface:rgba(255,255,255,0.75);
+  --surface-hover:rgba(255,255,255,0.95);
+  --border:rgba(184,134,11,0.22);
+  --border-strong:rgba(184,134,11,0.5);
+  --text-0:#2b2210;
+  --text-1:#5c4d2c;
+  --text-2:#8c7a54;
+  --violet:#B8860B;
+  --purple:#C9971F;
+  --pink:#DFB24E;
+  --gradient-bg:radial-gradient(ellipse 80% 60% at 20% -10%, rgba(184,134,11,0.09) 0%, transparent 60%),
+                radial-gradient(ellipse 70% 50% at 90% 10%, rgba(201,151,31,0.07) 0%, transparent 55%),
+                radial-gradient(ellipse 90% 70% at 50% 110%, rgba(223,178,78,0.1) 0%, transparent 60%),
+                linear-gradient(160deg, var(--bg-1) 0%, var(--bg-2) 60%, #faf3de 100%);
+  --shadow-glow:0 0 40px rgba(184,134,11,0.15);
+  --shadow-card: 0 16px 40px rgba(90,70,20,0.12);
   color-scheme: light;
 }
 
@@ -133,7 +133,10 @@ a{ color:inherit; text-decoration:none; }
   transition:opacity var(--screen-transition) var(--ease), transform var(--screen-transition) var(--ease);
   transform:translateX(100%);
   z-index:1;
+  scrollbar-width:none;
+  -ms-overflow-style:none;
 }
+.screen::-webkit-scrollbar{ display:none; }
 
 /* Active screen - visible */
 .screen.active{
@@ -213,7 +216,7 @@ a{ color:inherit; text-decoration:none; }
   width:38px; height:38px; border-radius:11px;
   background:var(--gradient-brand);
   display:flex; align-items:center; justify-content:center;
-  font-size:1.05rem; box-shadow:0 0 18px rgba(168,85,247,0.5);
+  font-size:1.05rem; box-shadow:0 0 18px rgba(212,175,55,0.5);
   flex-shrink:0;
 }
 .brand-text{ line-height:1.15; }
@@ -321,8 +324,8 @@ a{ color:inherit; text-decoration:none; }
 }
 
 @keyframes pulse-glow{
-  0%, 100%{ filter:drop-shadow(0 0 20px rgba(168,85,247,0.4)); transform:scale(1); }
-  50%{ filter:drop-shadow(0 0 40px rgba(168,85,247,0.6)); transform:scale(1.08); }
+  0%, 100%{ filter:drop-shadow(0 0 20px rgba(212,175,55,0.4)); transform:scale(1); }
+  50%{ filter:drop-shadow(0 0 40px rgba(212,175,55,0.6)); transform:scale(1.08); }
 }
 
 .hero-eyebrow{
@@ -403,14 +406,25 @@ a{ color:inherit; text-decoration:none; }
   to{ opacity:1; transform:scale(1) translateY(0); }
 }
 
+/* ---------- Card panel (bordered box wrapping the card grid) ---------- */
+.card-panel{
+  border:1.5px solid var(--border);
+  border-radius:var(--radius-xl);
+  background:rgba(255,255,255,0.02);
+  padding:clamp(16px, 2.4vw, 28px);
+  margin-bottom:24px;
+  max-width:900px;
+}
+
 /* ---------- Grid layout ---------- */
 .card-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(clamp(140px, 22vw, 260px), 1fr));
-  gap:clamp(12px, 2.4vw, 20px);
-  margin-bottom:40px;
+  grid-template-columns:repeat(auto-fit, minmax(120px, 155px));
+  justify-content:start;
+  gap:clamp(8px, 1vw, 14px);
+  margin-bottom:0;
   overflow-y:auto;
-  max-height:calc(100vh - 300px);
+  max-height:calc(100vh - 280px);
   padding-right:8px;
   /* Same fix as .showcase-grid: overflow-y:auto gives this flex item
      (inside .screen's flex column) an automatic min-height of 0, so
@@ -418,19 +432,29 @@ a{ color:inherit; text-decoration:none; }
      flex parent was crushing this grid down instead of letting it
      hit max-height and scroll — clipping card icons to a thin sliver. */
   flex-shrink:0;
+  /* Scrolling stays available as a fallback, but the bar itself is hidden —
+     the column-balancing in app.js keeps everything to two rows anyway. */
+  scrollbar-width:none;
+  -ms-overflow-style:none;
 }
 
-.card-grid::-webkit-scrollbar{ width:6px; }
-.card-grid::-webkit-scrollbar-thumb{ background:var(--border); border-radius:3px; }
+/* A bounded max (210px, not 1fr) lets auto-fit grow cards to fill more
+   of the row on wide screens — instead of leaving a lot of blank page —
+   while still capping how big any single card gets, so a screen with
+   only a couple of items (e.g. Collections) doesn't blow its cards up
+   far past the size they are on a screen with many items (Art Forms). */
+
+.card-grid::-webkit-scrollbar{ display:none; }
 
 /* ---------- Grid cards ---------- */
 .gcard{
   position:relative;
+  display:flex;
+  flex-direction:column;
   border-radius:var(--radius-lg);
   border:1px solid var(--border);
-  overflow:hidden;
+  overflow:visible; /* footer badge overlaps up onto the photo, so this can't clip */
   cursor:pointer;
-  aspect-ratio:4/3;
   transition:all var(--dur-fast) var(--ease);
   box-shadow:0 10px 26px rgba(5,2,15,0.28);
 }
@@ -444,22 +468,34 @@ a{ color:inherit; text-decoration:none; }
 /* Tonal photo-style backdrops, cycled per card for visual variety
    (stands in for real product photography). */
 .gcard-media{
-  position:absolute;
-  inset:0;
+  position:relative;
+  width:100%;
+  aspect-ratio:4/3;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:clamp(4.2rem, 9vw, 6.6rem);
+  font-size:clamp(1.8rem, 4vw, 2.4rem);
   overflow:hidden;
-  background:linear-gradient(150deg, rgba(124,92,252,0.30), rgba(236,72,153,0.16));
+  border-radius:var(--radius-lg) var(--radius-lg) 0 0;
+  background:linear-gradient(150deg, rgba(184,134,11,0.30), rgba(212,175,55,0.16));
 }
-.gcard-media[data-tone="1"]{ background:linear-gradient(150deg, rgba(168,85,247,0.30), rgba(124,92,252,0.16)); }
-.gcard-media[data-tone="2"]{ background:linear-gradient(150deg, rgba(236,72,153,0.28), rgba(168,85,247,0.16)); }
-.gcard-media[data-tone="3"]{ background:linear-gradient(150deg, rgba(124,92,252,0.28), rgba(236,72,153,0.20)); }
-.gcard-media[data-tone="4"]{ background:linear-gradient(150deg, rgba(80,110,255,0.28), rgba(124,92,252,0.16)); }
-.gcard-media[data-tone="5"]{ background:linear-gradient(150deg, rgba(236,72,153,0.24), rgba(80,110,255,0.16)); }
-.gcard-media[data-tone="6"]{ background:linear-gradient(150deg, rgba(168,85,247,0.26), rgba(236,72,153,0.14)); }
-.gcard-media[data-tone="7"]{ background:linear-gradient(150deg, rgba(124,92,252,0.24), rgba(168,85,247,0.20)); }
+.gcard-media[data-tone="1"]{ background:linear-gradient(150deg, rgba(233,196,106,0.30), rgba(184,134,11,0.16)); }
+.gcard-media[data-tone="2"]{ background:linear-gradient(150deg, rgba(212,175,55,0.28), rgba(233,196,106,0.16)); }
+.gcard-media[data-tone="3"]{ background:linear-gradient(150deg, rgba(184,134,11,0.28), rgba(212,175,55,0.20)); }
+.gcard-media[data-tone="4"]{ background:linear-gradient(150deg, rgba(184,134,11,0.28), rgba(184,134,11,0.16)); }
+.gcard-media[data-tone="5"]{ background:linear-gradient(150deg, rgba(212,175,55,0.24), rgba(184,134,11,0.16)); }
+.gcard-media[data-tone="6"]{ background:linear-gradient(150deg, rgba(233,196,106,0.26), rgba(212,175,55,0.14)); }
+.gcard-media[data-tone="7"]{ background:linear-gradient(150deg, rgba(184,134,11,0.24), rgba(233,196,106,0.20)); }
+
+.gcard-media .glow-photo{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform var(--dur-mid) var(--ease);
+}
+.gcard:hover .glow-photo{ transform:scale(1.06); }
 
 .gcard-media .glow-icon{
   opacity:.55;
@@ -475,74 +511,64 @@ a{ color:inherit; text-decoration:none; }
 }
 .gcard:hover .gcard-media::before{ transform:rotate(20deg) translateX(220%); }
 
-/* Bottom scrim so the overlaid title/badge stay legible over any backdrop */
-.gcard-scrim{
-  position:absolute; left:0; right:0; bottom:0; z-index:1;
-  height:65%;
-  background:linear-gradient(to top, rgba(6,3,14,0.92) 0%, rgba(6,3,14,0.45) 55%, transparent 100%);
-  pointer-events:none;
-}
-
-.gcard-body{
-  position:absolute; left:0; right:0; bottom:0; z-index:2;
-  padding:clamp(12px,1.6vw,18px);
+/* Solid footer panel below the photo. The badge sits half in the photo,
+   half in the footer, like an avatar breaking the seam between them. */
+.gcard-footer{
+  position:relative;
+  flex:1;
+  background:var(--bg-1);
+  border-radius:0 0 var(--radius-lg) var(--radius-lg);
+  padding:20px 12px 12px;
   display:flex;
-  align-items:center;
-  gap:12px;
+  flex-direction:column;
+  gap:2px;
 }
 .gcard-badge{
+  position:absolute;
+  top:-20px;
+  left:14px;
   flex-shrink:0;
-  width:40px; height:40px;
-  border-radius:12px;
+  width:32px; height:32px;
+  border-radius:50%;
   background:var(--gradient-brand);
   display:flex; align-items:center; justify-content:center;
-  font-size:1.15rem;
-  box-shadow:0 6px 16px rgba(124,92,252,0.45);
+  font-size:.9rem;
+  border:3px solid var(--bg-1);
+  box-shadow:0 6px 16px rgba(184,134,11,0.45);
 }
 .gcard-text{ display:flex; flex-direction:column; gap:2px; min-width:0; }
 .gcard-title{
   font-family:var(--font-display);
   font-weight:700;
-  font-size:clamp(.88rem,1.4vw,1.1rem);
+  font-size:clamp(.8rem,1.1vw,.94rem);
   letter-spacing:.2px;
   line-height:1.25;
-  color:#fff;
-  display:-webkit-box;
-  -webkit-line-clamp:2;
-  -webkit-box-orient:vertical;
-  overflow:hidden;
+  color:var(--text-0);
   overflow-wrap:break-word;
   word-break:break-word;
 }
-.gcard-sub{ font-size:.74rem; color:rgba(255,255,255,0.72); line-height:1.4; }
+.gcard-sub{ font-size:.68rem; color:var(--text-2); line-height:1.4; }
 
 
 .gcard{ transition-delay:0s; }
 .reveal.gcard, .reveal-scale.gcard{ transition-delay: var(--d, 0s); }
 
-/* ---------- Product showcase ---------- */
+/* ---------- Product showcase ----------
+   Stacked layout: the picture/video sits on top, the title and
+   description sit directly beneath it (order is set below), instead
+   of the old side-by-side split. */
 .showcase-grid{
-  display:grid;
-  grid-template-columns:1fr 1.25fr;
-  gap:clamp(28px,4vw,60px);
-  align-items:center;
+  display:flex;
+  flex-direction:column;
+  gap:clamp(20px,3vw,32px);
+  align-items:stretch;
   width:100%;
-  height:calc(100vh - 200px);
-  overflow:hidden;
-  /* Prevent this flex child from being crushed by its flex parent (.screen).
-     Without this, a flex item with overflow:hidden gets an automatic
-     min-height of 0 and can be squeezed below its content size instead
-     of the page scrolling — which is what caused content to get clipped
-     on mobile with no way to scroll to the rest of it. */
+  height:auto;
+  overflow-y:auto;
+  overflow-x:hidden;
   flex-shrink:0;
-}
-
-@media (max-width:900px){
-  .showcase-grid{
-    grid-template-columns:1fr;
-    height:auto;
-    overflow:visible;
-  }
+  max-width:900px;
+  margin:0 auto;
 }
 
 .media-col{
@@ -550,7 +576,17 @@ a{ color:inherit; text-decoration:none; }
   flex-direction:column;
   gap:14px;
   min-width:0;
+  order:1;
 }
+
+.showcase-info{
+  order:2;
+}
+
+/* Randomly applied per product (see app.js) so the photo sits above
+   the description for some artworks and below it for others. */
+.showcase-grid.text-first .media-col{ order:2; }
+.showcase-grid.text-first .showcase-info{ order:1; }
 
 .media-desc{
   font-size:.88rem;
@@ -603,7 +639,7 @@ a{ color:inherit; text-decoration:none; }
   font-size:1.1rem;
   transition:all var(--dur-fast) var(--ease);
 }
-.pnav-btn:hover{ border-color:var(--border-strong); box-shadow:0 0 22px rgba(168,85,247,0.3); transform:translateY(-2px); }
+.pnav-btn:hover{ border-color:var(--border-strong); box-shadow:0 0 22px rgba(212,175,55,0.3); transform:translateY(-2px); }
 .pnav-count{ font-size:.82rem; color:var(--text-2); letter-spacing:.5px; }
 
 .media-stage{
@@ -611,8 +647,9 @@ a{ color:inherit; text-decoration:none; }
   border-radius:var(--radius-xl);
   overflow:hidden;
   border:1.5px solid var(--border);
-  background:linear-gradient(150deg, rgba(124,92,252,0.14), rgba(236,72,153,0.08));
+  background:linear-gradient(150deg, rgba(184,134,11,0.14), rgba(212,175,55,0.08));
   aspect-ratio:4/3;
+  max-height:min(52vh, 460px);
   backdrop-filter:blur(var(--blur));
   box-shadow:var(--shadow-card);
 }
@@ -630,7 +667,8 @@ a{ color:inherit; text-decoration:none; }
   pointer-events:none;
 }
 .media-slide.active{ opacity:1; transform:scale(1); pointer-events:auto; }
-.media-icon{ font-size:clamp(4rem,10vw,6.5rem); filter:drop-shadow(0 12px 30px rgba(168,85,247,0.4)); }
+.media-icon{ font-size:clamp(4rem,10vw,6.5rem); filter:drop-shadow(0 12px 30px rgba(212,175,55,0.4)); }
+.media-photo{ width:100%; height:100%; object-fit:cover; }
 
 .media-badge{
   position:absolute;
@@ -793,7 +831,7 @@ a{ color:inherit; text-decoration:none; }
   transition:all var(--dur-fast) var(--ease);
 }
 .to-top.show{ opacity:1; pointer-events:auto; transform:translateY(0); }
-.to-top:hover{ border-color:var(--border-strong); box-shadow:0 0 24px rgba(168,85,247,0.3); }
+.to-top:hover{ border-color:var(--border-strong); box-shadow:0 0 24px rgba(212,175,55,0.3); }
 
 /* ---------- Grid pager ---------- */
 .grid-pager{
@@ -827,10 +865,30 @@ a{ color:inherit; text-decoration:none; }
   .brand-sub{ display:none; }
   .screen{ padding-top:calc(var(--header-h) + 20px); }
   .hero-logo{ font-size:clamp(2rem, 8vw, 4rem); }
-  .card-grid{ gap:8px; }
+  .card-panel{ padding:14px; border-radius:20px; }
+  .card-grid{ gap:8px; grid-template-columns:repeat(auto-fill, minmax(112px, 1fr)); }
+
+  /* The name now lives in a solid footer under the photo (not overlaid
+     on it), so it already wraps and shows in full — just scale the
+     badge and text down a touch for the smaller mobile card. */
+  .gcard-footer{ padding:22px 12px 12px; }
+  .gcard-badge{ width:34px; height:34px; font-size:.9rem; top:-17px; }
+  .gcard-title{ font-size:.78rem; }
+  .gcard-sub{ font-size:.68rem; }
+}
+
+@media (min-width:1200px){
+  .card-grid{
+    grid-template-columns:repeat(auto-fit, minmax(130px, 165px));
+    gap:clamp(8px, 1vw, 14px);
+  }
 }
 
 @media (min-width:1800px){
   .screen{ padding-left:120px; padding-right:120px; }
   .hero-title{ font-size:5.2rem; }
+  .card-grid{
+    grid-template-columns:repeat(auto-fit, minmax(140px, 175px));
+    gap:clamp(10px, 0.9vw, 16px);
+  }
 }

@@ -2,122 +2,94 @@
    DATA.JS — AKSHAYA ART GALLERY Catalog
    Structure: groups[] -> categories[] -> products[] -> media[]
    Traditional and contemporary artistry
+   
+   CATEGORIES BASED ON UPLOADED IMAGES:
+   - Kerala Mural Art
+   - Traditional Pichwai Paintings
+   - Handcrafted Sculptures
+   - Decorated Vessels & Pots
+   - Textile & Embroidery Art
+   - Home Decor Accessories
    ========================================================================= */
 
 const GALLERY_DATA = {
   groups: [
     {
       id: 1,
-      name: "Paintings & Canvas",
+      name: "Kerala Mural Art",
       icon: "🎨",
-      tagline: "Oil, watercolor, and acrylic masterpieces",
-      description: "Explore our curated collection of fine paintings spanning traditional to contemporary styles. Each piece tells a unique story through color and form.",
+      photo: "static/img/kerala-mural-cover.jpg",
+      tagline: "Traditional Kerala murals and Kathakali-inspired paintings",
+      description: "Experience the rich heritage of Kerala's ancient mural tradition. Our collection showcases traditional narratives rendered with natural pigments and authentic techniques, celebrating divine stories and mythological tales.",
+      color: "#8B4513",
       categories: [
         {
           id: 101,
-          name: "Oil Paintings",
-          icon: "🖼️",
+          name: "Traditional Kathakali Paintings",
+          icon: "🎭",
+          description: "Classical Kerala mural style depicting divine and mythological characters",
           products: [
             {
               id: 1001,
-              name: "Sunset Harmony",
-              artist: "Madhavi Nair",
-              info: "Oil on Canvas, 2023",
-              description: "A breathtaking composition capturing the golden hour over serene backwaters. The interplay of warm oranges and deep purples creates a meditative atmosphere that invites contemplation.",
-              specs: ["Oil on Canvas", "100cm × 140cm", "Framed", "Museum Quality"],
+              name: "Radha-Krishna Divine Dance",
+              artist: "Master Artisan Collective, Kerala",
+              info: "Natural Pigments on Canvas, Traditional Technique",
+              description: "A vibrant Kathakali-inspired composition featuring Lord Krishna with divine consort Radha. Rich greens, oranges, and reds characteristic of Kerala murals dominate this piece. Traditional dot-painting (pointillism) details adorned with ornamental patterns and gold leaf accents.",
+              specs: ["Natural Pigments", "100cm × 140cm", "Gallery Mount", "Museum Quality"],
+              origin: "Kerala, South India",
               media: [
-                { type: "image", icon: "🎨", caption: "Full view", captionPosition: "footer" },
-                { type: "image", icon: "🖼️", caption: "Detail: Brushwork", captionPosition: "footer" },
-                { type: "video", icon: "🎬", caption: "Artist's process", captionPosition: "header" }
+                { type: "image", icon: "🎨", src: "static/img/image1.jpg", caption: "Main composition", captionPosition: "footer" },
+                { type: "image", icon: "🎭", caption: "Detail: Facial expressions & ornaments", captionPosition: "footer" },
+                { type: "video", icon: "🎬", src: "https://www.facebook.com/reel/1263187195895567/", caption: "Artist's Process", captionPosition: "header" }
               ]
             },
             {
               id: 1002,
-              name: "Monsoon Dreams",
-              artist: "Rajesh Kumar",
-              info: "Oil on Canvas, 2022",
-              description: "Dynamic strokes capture the essence of Kerala's monsoon season. Dark clouds and dancing rain are rendered with passionate energy, evoking the spirit of nature's renewal.",
-              specs: ["Oil on Canvas", "120cm × 90cm", "Framed", "Contemporary"],
+              name: "Divine Vishnu - Cosmic Form",
+              artist: "Traditional Kerala Master",
+              info: "Natural Pigments on Canvas, 2023",
+              description: "Depicts Lord Vishnu in his cosmic manifestation with elaborate headdress and divine weapons. The ornate crown with peacock motifs and celestial aura showcase traditional Kerala mural iconography.",
+              specs: ["Natural Pigments", "120cm × 150cm", "Professional Mount", "Heritage Art"],
+              origin: "Kerala, South India",
               media: [
-                { type: "image", icon: "🎨", caption: "Complete work", captionPosition: "footer" },
-                { type: "video", icon: "🎬", caption: "Studio documentation", captionPosition: "header" }
+                { type: "image", icon: "🎨", src: "static/img/image2.jpg", caption: "Full composition", captionPosition: "footer" },
+                { type: "image", icon: "👑", caption: "Ornate crown detail", captionPosition: "footer" },
+                { type: "video", icon: "🎬", src: "https://www.facebook.com/reel/1255181889364326/", caption: "Creative Process", captionPosition: "header" }
               ]
             },
             {
               id: 1003,
-              name: "Temple Bells",
-              artist: "Kavya Menon",
-              info: "Oil on Canvas, 2023",
-              description: "An intimate portrayal of morning rituals at a historic temple. Soft diffused light illuminates sacred spaces, creating a sense of spiritual tranquility.",
-              specs: ["Oil on Canvas", "80cm × 120cm", "Framed", "Spiritual Art"],
+              name: "Kathakali Performer - Green Face",
+              artist: "Heritage Kerala Artisans",
+              info: "Natural Pigments & Traditional Medium",
+              description: "Classical Kathakali character with signature green face paint. Intricate costume details with red and gold embroidery patterns, traditional crown, and ornamental jewelry showcase the complexity of Kerala's theatrical tradition.",
+              specs: ["Traditional Medium", "90cm × 130cm", "Canvas Mount", "Authentic Technique"],
+              origin: "Kerala, South India",
               media: [
-                { type: "image", icon: "🎨", caption: "Main composition", captionPosition: "footer" },
-                { type: "image", icon: "🖼️", caption: "Close-up details", captionPosition: "footer" },
-                { type: "video", icon: "🎬", caption: "Light study", captionPosition: "header" }
+                { type: "image", icon: "🎭", src: "static/img/image1.jpg", caption: "Character study", captionPosition: "footer" },
+                { type: "image", icon: "💚", caption: "Green face detail", captionPosition: "footer" }
               ]
             }
           ]
         },
         {
           id: 102,
-          name: "Watercolor Landscapes",
-          icon: "💧",
+          name: "Pichwai Traditional Paintings",
+          icon: "🕉️",
+          description: "Sacred narrative paintings depicting mythological stories",
           products: [
             {
               id: 1011,
-              name: "Backwater Reflections",
-              artist: "Anjali Sharma",
-              info: "Watercolor on Paper, 2023",
-              description: "Luminous watercolor study of Kerala's enchanting backwaters. Transparent layers of pigment create an ethereal quality, capturing water's ever-changing nature.",
-              specs: ["Watercolor on Paper", "70cm × 50cm", "Matted", "Landscape"],
+              name: "Pichwai: Divine Narrative",
+              artist: "Traditional Indian Master Artist",
+              info: "Natural Pigments on Canvas, Heritage Technique",
+              description: "A grand pichwai composition featuring multiple divine characters in a complex narrative scene. The traditional hierarchical composition with celestial beings, devotees, and sacred symbols is rendered with vibrant reds, greens, and golds against an ornate patterned background.",
+              specs: ["Natural Pigments", "140cm × 200cm", "Museum Grade Mount", "Heritage Masterpiece"],
+              origin: "Rajasthan/Mathura Tradition",
               media: [
-                { type: "image", icon: "💧", caption: "Complete painting", captionPosition: "footer" },
-                { type: "video", icon: "🎬", caption: "Painting technique", captionPosition: "header" }
-              ]
-            },
-            {
-              id: 1012,
-              name: "Misty Mountains",
-              artist: "Vikram Singh",
-              info: "Watercolor on Paper, 2022",
-              description: "Serene mountain landscape rendered in cool blues and grays. The mist-laden peaks evoke a sense of peaceful isolation and spiritual contemplation.",
-              specs: ["Watercolor on Paper", "60cm × 90cm", "Matted", "Nature"],
-              media: [
-                { type: "image", icon: "💧", caption: "Landscape view", captionPosition: "footer" },
-                { type: "image", icon: "🏔️", caption: "Peak detail", captionPosition: "footer" },
-                { type: "video", icon: "🎬", caption: "Creation video", captionPosition: "header" }
-              ]
-            }
-          ]
-        },
-        {
-          id: 103,
-          name: "Abstract & Modern",
-          icon: "✨",
-          products: [
-            {
-              id: 1021,
-              name: "Urban Rhythm",
-              artist: "Priya Gupta",
-              info: "Acrylic on Canvas, 2023",
-              description: "Bold geometric forms and vibrant hues express the pulse of modern city life. This piece celebrates the energy, movement, and diversity of urban spaces.",
-              specs: ["Acrylic on Canvas", "110cm × 110cm", "Framed", "Contemporary"],
-              media: [
-                { type: "image", icon: "✨", caption: "Full composition", captionPosition: "footer" },
-                { type: "image", icon: "🎨", caption: "Color detail", captionPosition: "footer" },
-                { type: "video", icon: "🎬", caption: "Creation process", captionPosition: "header" }
-              ]
-            },
-            {
-              id: 1022,
-              name: "Meditation",
-              artist: "Arjun Desai",
-              info: "Mixed Media, 2023",
-              description: "An introspective exploration of inner stillness. Layered textures and subtle color transitions create a contemplative space for the viewer's own reflection.",
-              specs: ["Mixed Media", "100cm × 100cm", "Framed", "Spiritual"],
-              media: [
-                { type: "image", icon: "✨", caption: "Textured surface", captionPosition: "footer" },
-                { type: "video", icon: "🎬", caption: "Material study", captionPosition: "header" }
+                { type: "image", icon: "🕉️", src: "static/img/image3.jpg", caption: "Complete narrative", captionPosition: "footer" },
+                { type: "image", icon: "✨", caption: "Celestial beings detail", captionPosition: "footer" },
+                { type: "video", icon: "🎬", caption: "Artistic documentation", captionPosition: "header" }
               ]
             }
           ]
@@ -126,106 +98,66 @@ const GALLERY_DATA = {
     },
     {
       id: 2,
-      name: "Sculptures & Carvings",
+      name: "Handcrafted Sculptures & Carvings",
       icon: "🗿",
-      tagline: "Stone, wood, and bronze expressions",
-      description: "Witness the transformative power of sculptural art. From ancient traditions to contemporary installations, each piece demonstrates the artist's mastery over form and dimension.",
+      photo: "static/img/sculptures-cover.jpg",
+      tagline: "Intricate wood carvings and decorative sculptures",
+      description: "Discover the artistry of traditional Indian sculpture. From divine figurines to nature-inspired wooden carvings, each piece showcases exceptional craftsmanship and attention to detail.",
+      color: "#654321",
       categories: [
         {
           id: 201,
-          name: "Stone Sculptures",
-          icon: "🪨",
+          name: "Krishna Figurines",
+          icon: "💙",
+          description: "Divine Krishna sculptures with ornate decorations",
           products: [
             {
               id: 2001,
-              name: "Divine Grace",
-              artist: "Suresh Nambiar",
-              info: "Granite Sculpture, 2022",
-              description: "An exquisite hand-carved granite sculpture depicting a classical deity in a serene pose. The artist's meticulous work reveals the stone's natural beauty.",
-              specs: ["Granite", "180cm Height", "Stone Base", "Sacred Art"],
+              name: "Krishna with Peacock Crown",
+              artist: "Master Sculptor, Indian Artisans",
+              info: "Hand-Painted Wood & Precious Gems, Mixed Technique",
+              description: "An exquisite Krishna figurine with blue-painted complexion, adorned with a golden crown topped with a real peacock feather. The deity holds a flute (bansuri) and wears ornamental jewelry - pearl necklaces, bangles, and jeweled crown. Red and yellow silks form the divine attire. Each embellishment is hand-applied with semi-precious stones.",
+              specs: ["Wood Base", "Hand-Painted", "Peacock Feather Crown", "Precious Stones", "Height: 35cm"],
+              origin: "South India",
               media: [
-                { type: "image", icon: "🗿", caption: "Front view", captionPosition: "footer" },
-                { type: "image", icon: "🗿", caption: "Profile view", captionPosition: "footer" },
-                { type: "video", icon: "🎬", caption: "Detailed walkthrough", captionPosition: "header" }
-              ]
-            },
-            {
-              id: 2002,
-              name: "Eternal Dance",
-              artist: "Malini Chakraborty",
-              info: "Marble Sculpture, 2023",
-              description: "A dynamic marble sculpture capturing the graceful movement of classical dance. The flowing lines and elegant proportions celebrate the human form.",
-              specs: ["Marble", "150cm Height", "Polished Finish", "Classical"],
-              media: [
-                { type: "image", icon: "🗿", caption: "Sculpture stance", captionPosition: "footer" },
-                { type: "image", icon: "🗿", caption: "Carved details", captionPosition: "footer" },
-                { type: "video", icon: "🎬", caption: "360° view", captionPosition: "header" }
+                { type: "image", icon: "💙", src: "static/img/image4.jpg", caption: "Complete figurine", captionPosition: "footer" },
+                { type: "image", icon: "👑", caption: "Ornate crown & feather", captionPosition: "footer" },
+                { type: "image", icon: "✨", caption: "Jewelry details", captionPosition: "footer" }
               ]
             }
           ]
         },
         {
           id: 202,
-          name: "Wood Carvings",
-          icon: "🪵",
+          name: "Wooden Hand-Carved Art",
+          icon: "🦉",
+          description: "Intricate wooden sculptures of animals and nature motifs",
           products: [
             {
               id: 2011,
-              name: "Wooden Elephant",
-              artist: "Kumaran Artisan",
-              info: "Rosewood Carving, 2022",
-              description: "Intricate rosewood carving of an elephant, featuring detailed tusks and ornamental blanket. A masterpiece of traditional craftsmanship passed through generations.",
-              specs: ["Rosewood", "80cm Height", "Hand-Carved", "Traditional"],
+              name: "Wise Owl Carved Bottle",
+              artist: "Traditional Wood Carver",
+              info: "Hand-Carved Wood, Mixed Media",
+              description: "A charming dark wooden bottle transformed into a wise owl sculpture. The piece features a carved owl face with golden painted eyes and intricate leaf details in green and natural wood tones. A rope vine spirals around the bottle, creating an organic, nature-inspired composition. Perfect as a decorative accent or functional bottle.",
+              specs: ["Hand-Carved Wood", "Mixed Paint", "Rope Detailing", "Height: 25cm", "Decorative/Functional"],
+              origin: "South India",
               media: [
-                { type: "image", icon: "🪵", caption: "Full sculpture", captionPosition: "footer" },
-                { type: "image", icon: "🪶", caption: "Carving detail", captionPosition: "footer" },
-                { type: "video", icon: "🎬", caption: "Artisan documentation", captionPosition: "header" }
+                { type: "image", icon: "🦉", src: "static/img/image5.jpg", caption: "Full sculpture", captionPosition: "footer" },
+                { type: "image", icon: "👀", caption: "Owl face detail", captionPosition: "footer" },
+                { type: "image", icon: "🍃", caption: "Leaf carving detail", captionPosition: "footer" }
               ]
             },
             {
               id: 2012,
-              name: "Kerala Village",
-              artist: "Pradeep Menon",
-              info: "Teakwood Wall Panel, 2023",
-              description: "A stunning teak wood relief panel depicting life in a traditional Kerala village. Every detail from architecture to daily activities is meticulously carved.",
-              specs: ["Teakwood Panel", "120cm × 180cm", "Wall-Mount", "Heritage Art"],
+              name: "Grapevine Wrapped Bottle Art",
+              artist: "Master Wood Artist",
+              info: "Terracotta & Hand-Painted Wood",
+              description: "A terracotta bottle wrapped with sculpted grapevine elements. Realistic purple grapes cluster around the neck, with green carved leaves detailed throughout. The warm terracotta base contrasts beautifully with the vibrant painted accents. A stunning piece that celebrates harvest and natural abundance.",
+              specs: ["Terracotta Base", "Sculpted Grapes", "Painted Leaves", "Height: 28cm", "Wall Mountable"],
+              origin: "South India",
               media: [
-                { type: "image", icon: "🪵", caption: "Complete panel", captionPosition: "footer" },
-                { type: "image", icon: "🏘️", caption: "Village details", captionPosition: "footer" },
-                { type: "video", icon: "🎬", caption: "Carved narrative", captionPosition: "header" }
-              ]
-            }
-          ]
-        },
-        {
-          id: 203,
-          name: "Bronze & Metal Works",
-          icon: "🔶",
-          products: [
-            {
-              id: 2021,
-              name: "Brass Lamp",
-              artist: "Vikram Metalworks",
-              info: "Brass with Hand-Painted Shade, 2023",
-              description: "An elegant decorative lamp combining traditional brass casting with contemporary design. The hand-painted silk shade diffuses warm, ambient light.",
-              specs: ["Brass & Silk", "65cm Height", "Functional Art", "Modern Traditional"],
-              media: [
-                { type: "image", icon: "🔶", caption: "Lit display", captionPosition: "footer" },
-                { type: "image", icon: "💡", caption: "Shade detail", captionPosition: "footer" },
-                { type: "video", icon: "🎬", caption: "Product showcase", captionPosition: "header" }
-              ]
-            },
-            {
-              id: 2022,
-              name: "Cosmic Journey",
-              artist: "Arjun Bronze Studio",
-              info: "Bronze Abstract Sculpture, 2023",
-              description: "A contemporary bronze sculpture exploring themes of cosmic movement and transformation. The flowing forms suggest orbits and celestial pathways.",
-              specs: ["Bronze", "120cm Height", "Dark Patina Finish", "Contemporary"],
-              media: [
-                { type: "image", icon: "🔶", caption: "Front perspective", captionPosition: "footer" },
-                { type: "image", icon: "⭐", caption: "Abstract details", captionPosition: "footer" },
-                { type: "video", icon: "🎬", caption: "Rotation view", captionPosition: "header" }
+                { type: "image", icon: "🍇", src: "static/img/image6.jpg", caption: "Complete bottle art", captionPosition: "footer" },
+                { type: "image", icon: "🍃", caption: "Grape cluster detail", captionPosition: "footer" }
               ]
             }
           ]
@@ -234,105 +166,77 @@ const GALLERY_DATA = {
     },
     {
       id: 3,
-      name: "Traditional Arts",
-      icon: "🎭",
-      tagline: "Kathakali, murals, and classical traditions",
-      description: "Celebrate the rich heritage of Indian classical arts. These pieces represent centuries of artistic tradition and cultural storytelling.",
+      name: "Decorated Vessels & Pottery",
+      icon: "🏺",
+      photo: "static/img/pottery-cover.jpg",
+      tagline: "Hand-painted pots, bowls, and decorative containers",
+      description: "Traditional and contemporary pottery featuring intricate hand-painted designs. Each vessel is a functional artwork celebrating Indian cultural motifs and artistic heritage.",
+      color: "#B8860B",
       categories: [
         {
           id: 301,
-          name: "Kathakali & Dance Art",
-          icon: "🎭",
+          name: "Dot-Painted Decorative Boxes",
+          icon: "📦",
+          description: "Black vessels with traditional dot-painting (mandala) techniques",
           products: [
             {
               id: 3001,
-              name: "Kathakali Heritage",
-              artist: "Ramesh Kuttichira",
-              info: "Acrylic on Canvas, 2022",
-              description: "A vibrant portrayal of a Kathakali performer in full costume and makeup. The jewel-toned colors and dramatic expression capture the essence of this ancient art form.",
-              specs: ["Acrylic on Canvas", "90cm × 120cm", "Framed", "Classical Arts"],
+              name: "Kathakali Mask - Dot Painted Box",
+              artist: "Indian Dot-Painting Master",
+              info: "Hand-Painted Terracotta, Traditional Technique",
+              description: "A striking decorative bottle with a bold Kathakali mask face painted in traditional dot-painting style. The vibrant red face with white, orange, and gold dots creates intricate patterns. Concentric circular dot patterns (typical of Warli or dot-painting art) form the theatrical headdress and facial features. Perfect as a conversation piece or sacred art display.",
+              specs: ["Terracotta", "Hand-Painted Dots", "Black Base", "Height: 30cm", "Decorative Vessel"],
+              origin: "South India - Traditional Technique",
               media: [
-                { type: "image", icon: "🎭", caption: "Full figure", captionPosition: "footer" },
-                { type: "image", icon: "👤", caption: "Face makeup detail", captionPosition: "footer" },
-                { type: "video", icon: "🎬", caption: "Performance art", captionPosition: "header" }
+                { type: "image", icon: "🎭", src: "static/img/image7.jpg", caption: "Mask face design", captionPosition: "footer" },
+                { type: "image", icon: "⭕", caption: "Dot pattern detail", captionPosition: "footer" }
               ]
             },
             {
               id: 3002,
-              name: "Traditional Dancer",
-              artist: "Deepa Nair",
-              info: "Oil on Canvas, 2023",
-              description: "An elegant composition of a classical dancer in mid-performance. The movement and grace are rendered through dynamic lines and warm earth tones.",
-              specs: ["Oil on Canvas", "85cm × 115cm", "Framed", "Performing Arts"],
+              name: "Mandala Box - Colorful Dot Art",
+              artist: "Contemporary Dot-Painting Artist",
+              info: "Hand-Painted Box, Mixed Media",
+              description: "A beautiful black dome-shaped box adorned with traditional mandala-inspired dot painting. Vibrant dots in yellow, orange, white, pink, and green create intricate geometric and circular patterns across the lid and body. The detailed dot-work reveals mathematical precision and artistic harmony.",
+              specs: ["Black Wood/Material Base", "Colorful Dots", "Dome Lid", "Diameter: 25cm", "Storage Box"],
+              origin: "India",
               media: [
-                { type: "image", icon: "🎭", caption: "Dancer in motion", captionPosition: "footer" },
-                { type: "video", icon: "🎬", caption: "Artistic study", captionPosition: "header" }
+                { type: "image", icon: "⭕", src: "static/img/image15.jpg", caption: "Complete mandala design", captionPosition: "footer" },
+                { type: "image", icon: "🎨", caption: "Color dot detail", captionPosition: "footer" }
               ]
             }
           ]
         },
         {
           id: 302,
-          name: "Kerala Murals",
-          icon: "🖌️",
+          name: "Hand-Painted Flower Pots",
+          icon: "🌸",
+          description: "Vibrant painted terracotta pots with floral and nature designs",
           products: [
             {
               id: 3011,
-              name: "Kerala Mural: Sacred Space",
-              artist: "Rajesh Muralidharan",
-              info: "Natural Pigments on Canvas, 2023",
-              description: "Recreating the ancient Kerala mural tradition using natural pigments. This composition depicts sacred narratives with the spiritual depth of historical temple murals.",
-              specs: ["Natural Pigments", "120cm × 180cm", "Mounted", "Heritage Technique"],
+              name: "Yellow Tribal Pattern Pot",
+              artist: "Tribal Art Collective",
+              info: "Hand-Painted Terracotta",
+              description: "A cheerful yellow terracotta pot featuring tribal-inspired patterns. Blue fern-leaf designs and geometric triangle borders at the rim create a striking contrast. Traditional motifs celebrate nature and indigenous art traditions. Ideal for indoor plants or decorative display.",
+              specs: ["Terracotta", "Hand-Painted", "Yellow Base", "Blue Patterns", "Diameter: 15cm"],
+              origin: "South India",
               media: [
-                { type: "image", icon: "🖌️", caption: "Full mural", captionPosition: "footer" },
-                { type: "image", icon: "🕉️", caption: "Sacred imagery", captionPosition: "footer" },
-                { type: "video", icon: "🎬", caption: "Pigment technique", captionPosition: "header" }
+                { type: "image", icon: "🌼", src: "static/img/image11.jpg", caption: "Full pot design", captionPosition: "footer" },
+                { type: "image", icon: "🍃", caption: "Fern leaf pattern", captionPosition: "footer" }
               ]
             },
             {
               id: 3012,
-              name: "Mythological Tales",
-              artist: "Suma Prabhu",
-              info: "Natural Pigments on Canvas, 2022",
-              description: "An expansive mural composition depicting episodes from Hindu mythology. Each figure is rendered with the characteristic style of traditional Kerala murals.",
-              specs: ["Natural Pigments", "140cm × 200cm", "Museum Mount", "Classical"],
+              name: "Multicolor Floral Pot",
+              artist: "Traditional Potter",
+              info: "Hand-Painted Terracotta",
+              description: "A cream-colored pot bursting with multicolor flower designs. Hand-painted flowers in red, purple, yellow, and blue with green stems and leaves create a vibrant garden scene. The butterfly motif adds whimsical charm. Perfect for housing plants or as a standalone decorative piece.",
+              specs: ["Terracotta", "Hand-Painted Florals", "Cream Base", "Butterfly Design", "Diameter: 18cm"],
+              origin: "India",
               media: [
-                { type: "image", icon: "🖌️", caption: "Epic narrative", captionPosition: "footer" },
-                { type: "image", icon: "📖", caption: "Story details", captionPosition: "footer" },
-                { type: "video", icon: "🎬", caption: "Restoration documentation", captionPosition: "header" }
-              ]
-            }
-          ]
-        },
-        {
-          id: 303,
-          name: "Intricate Patterns",
-          icon: "🎀",
-          products: [
-            {
-              id: 3021,
-              name: "Geometric Harmony",
-              artist: "Lakshmi Artisan Collective",
-              info: "Hand-Drawn Pattern Work, 2023",
-              description: "A mesmerizing geometric pattern based on traditional Kerala architectural designs. Each line is drawn with precision to create perfect symmetry.",
-              specs: ["Mixed Media", "100cm × 100cm", "Framed", "Pattern Art"],
-              media: [
-                { type: "image", icon: "🎀", caption: "Full pattern", captionPosition: "footer" },
-                { type: "image", icon: "✨", caption: "Intricate detail", captionPosition: "footer" },
-                { type: "video", icon: "🎬", caption: "Pattern zoom", captionPosition: "header" }
-              ]
-            },
-            {
-              id: 3022,
-              name: "Kaleidoscopic Dreams",
-              artist: "Asha Menon",
-              info: "Digital Print with Hand Touch-up, 2023",
-              description: "Contemporary interpretation of traditional Indian pattern work. Symmetrical mandala-like forms create a hypnotic, meditative visual experience.",
-              specs: ["Hybrid Medium", "110cm × 110cm", "Gallery Wrap", "Modern Traditional"],
-              media: [
-                { type: "image", icon: "🎀", caption: "Symmetrical design", captionPosition: "footer" },
-                { type: "image", icon: "🔮", caption: "Center medallion", captionPosition: "footer" },
-                { type: "video", icon: "🎬", caption: "Pattern evolution", captionPosition: "header" }
+                { type: "image", icon: "🌸", src: "static/img/image14.jpg", caption: "Complete pot with plant", captionPosition: "footer" },
+                { type: "image", icon: "🦋", caption: "Floral detail", captionPosition: "footer" }
               ]
             }
           ]
@@ -341,72 +245,167 @@ const GALLERY_DATA = {
     },
     {
       id: 4,
-      name: "Contemporary Installations",
-      icon: "🎪",
-      tagline: "Modern expressions and experimental media",
-      description: "Explore cutting-edge contemporary art that challenges perceptions and invites interactive engagement.",
+      name: "Textile & Embroidery Art",
+      icon: "🧵",
+      photo: "static/img/textile-cover.jpg",
+      tagline: "Hand-embroidered fabrics and woven textiles",
+      description: "Celebrate traditional textile arts featuring intricate hand-embroidery, colorful thread work, and cultural symbolism. Each piece tells stories through fabric and thread.",
+      color: "#9932CC",
       categories: [
         {
           id: 401,
-          name: "Mixed Media Installations",
-          icon: "📦",
+          name: "Embroidered Wall Hangings",
+          icon: "🌸",
+          description: "Large embroidered tapestries with floral and symbolic designs",
           products: [
             {
               id: 4001,
-              name: "Urban Fragments",
-              artist: "Nikhil Desai",
-              info: "Mixed Media Installation, 2023",
-              description: "A thought-provoking installation combining recycled materials, found objects, and contemporary pigments. It critiques consumerism while celebrating transformation.",
-              specs: ["Recycled Materials", "Variable Dimensions", "Interactive", "Social Commentary"],
+              name: "Welcome Garden - Embroidered Tapestry",
+              artist: "Master Embroiderer, Indian Textile Arts",
+              info: "Hand-Embroidered Fabric, Traditional Stitching",
+              description: "An exquisite embroidered welcome mat featuring a garden scene with vibrant flowers. The centerpiece displays a woman figure with outstretched arms holding flowers in red, purple, blue, and yellow. Colorful flowers surround the figure with green embroidered stems and leaves. The word 'WELCOME' in multi-colored threads tops the composition. Perfect for entryways or wall display.",
+              specs: ["Hand-Embroidered", "Cotton Base", "Multicolor Thread", "100cm × 80cm", "Wall Hanging/Mat"],
+              origin: "South India - Traditional Embroidery",
               media: [
-                { type: "image", icon: "📦", caption: "Installation view", captionPosition: "footer" },
-                { type: "image", icon: "🔧", caption: "Material composition", captionPosition: "footer" },
-                { type: "video", icon: "🎬", caption: "Interactive experience", captionPosition: "header" }
+                { type: "image", icon: "🌸", src: "static/img/image9.jpg", caption: "Complete composition", captionPosition: "footer" },
+                { type: "image", icon: "👩", caption: "Figure detail", captionPosition: "footer" },
+                { type: "image", icon: "🌼", caption: "Floral embroidery", captionPosition: "footer" }
               ]
             },
             {
               id: 4002,
-              name: "Digital Dreams",
-              artist: "Sophia Chen & Collective",
-              info: "Mixed Media with Digital Elements, 2023",
-              description: "A immersive installation blending traditional textiles with digital projections. The work explores the intersection of heritage and technology.",
-              specs: ["Textiles & Digital", "Large Scale", "Immersive", "Contemporary"],
+              name: "Akshaya Art - Lotus Embroidery",
+              artist: "Contemporary Embroidery Artist",
+              info: "Hand-Embroidered Canvas",
+              description: "A contemporary embroidered piece featuring the Akshaya Art signature lotus motif with ornate 3D lotus flowers surrounding it. Purple flowers with yellow centers dominate, with green vine elements creating flowing movements. The 'Akshaya Art' branding includes the symbolic lotus in vibrant colors.",
+              specs: ["Hand-Embroidered", "Canvas Base", "3D Elements", "120cm × 100cm", "Art Piece"],
+              origin: "India",
               media: [
-                { type: "image", icon: "📦", caption: "Installation space", captionPosition: "footer" },
-                { type: "video", icon: "🎬", caption: "Projection sequence", captionPosition: "header" }
+                { type: "image", icon: "🌸", src: "static/img/image10.jpg", caption: "Full embroidered design", captionPosition: "footer" },
+                { type: "image", icon: "💜", caption: "Purple flower detail", captionPosition: "footer" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: 5,
+      name: "Home Decor Accessories",
+      icon: "✨",
+      photo: "static/img/decor-cover.jpg",
+      tagline: "Functional art for modern homes",
+      description: "Transform your living space with handcrafted home accessories that blend traditional artistry with contemporary design. Each piece serves as both decoration and a conversation starter.",
+      color: "#FF69B4",
+      categories: [
+        {
+          id: 501,
+          name: "Face Planters & Vessels",
+          icon: "😊",
+          description: "Artistic face planters with expressive features",
+          products: [
+            {
+              id: 5001,
+              name: "Serene Face Planter - Closed Eyes",
+              artist: "Ceramic Artist Collective",
+              info: "Hand-Painted Ceramic",
+              description: "A meditative white ceramic planter with a peaceful face featuring closed, lashed eyes and full pink lips. The minimalist design celebrates tranquility and inner peace. Perfect for small succulents or air plants, doubling as a minimalist art piece for shelf or desk display.",
+              specs: ["Ceramic", "Hand-Painted", "White Base", "Pink Accents", "Height: 15cm"],
+              origin: "South India",
+              media: [
+                { type: "image", icon: "😊", src: "static/img/image12.jpg", caption: "Complete planter", captionPosition: "footer" },
+                { type: "image", icon: "👁️", caption: "Face detail", captionPosition: "footer" }
+              ]
+            },
+            {
+              id: 5002,
+              name: "Expressive Face Planter Set",
+              artist: "Contemporary Ceramic Studio",
+              info: "Hand-Painted Ceramic Planters",
+              description: "A pair of artistic face planters with expressive features. One features closed, serene eyes with pink lips; the other displays open, alert eyes with bold eyebrows. Different facial expressions create a dialogue between pieces. Green ivy naturally cascades around both, enhancing the artistic composition.",
+              specs: ["Ceramic", "Paired Set", "Hand-Painted", "White Base", "Height: 15-18cm each"],
+              origin: "India",
+              media: [
+                { type: "image", icon: "😊", caption: "Serene face", captionPosition: "footer" },
+                { type: "image", icon: "😲", caption: "Alert face", captionPosition: "footer" }
               ]
             }
           ]
         },
         {
-          id: 402,
-          name: "Fiber & Textile Art",
-          icon: "🧵",
+          id: 502,
+          name: "Decorated Bottles & Containers",
+          icon: "🌸",
+          description: "Hand-painted bottles and containers with floral motifs",
           products: [
             {
-              id: 4011,
-              name: "Woven Stories",
-              artist: "Bindhu Vasu",
-              info: "Hand-Woven Textile Art, 2023",
-              description: "A stunning hand-woven composition using natural fibers and traditional weaving techniques. Each thread tells a story of heritage and skill.",
-              specs: ["Natural Fibers", "150cm × 200cm", "Gallery Mount", "Textile Art"],
+              id: 5011,
+              name: "Floral Gift Set - Painted Bottles",
+              artist: "Artisan Decorative Collective",
+              info: "Hand-Decoupaged Glass, Mixed Media",
+              description: "A beautiful collection of decorated bottles featuring hand-painted floral designs. Each bottle showcases different flower arrangements - roses, tulips, and botanical elements - in pink, red, and green colors. Ropes and natural fiber accents add texture. Perfect as gift containers or standalone decorative pieces for vanity or shelf styling.",
+              specs: ["Glass Bottles", "Hand-Decoupaged", "Floral Design", "Rope Details", "Set of 4"],
+              origin: "South India",
               media: [
-                { type: "image", icon: "🧵", caption: "Full textile", captionPosition: "footer" },
-                { type: "image", icon: "🌾", caption: "Weave detail", captionPosition: "footer" },
-                { type: "video", icon: "🎬", caption: "Weaving process", captionPosition: "header" }
+                { type: "image", icon: "🌸", src: "static/img/image13.jpg", caption: "Complete bottle collection", captionPosition: "footer" },
+                { type: "image", icon: "🌹", caption: "Floral detail", captionPosition: "footer" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: 6,
+      name: "Artist Process & Documentation",
+      icon: "🎬",
+      tagline: "Behind-the-scenes of creative traditions",
+      description: "Explore the artistic journey and traditional techniques through video documentation. Witness master artisans at work, preserving centuries-old traditions.",
+      color: "#FF6347",
+      categories: [
+        {
+          id: 601,
+          name: "Studio Documentaries",
+          icon: "🎥",
+          description: "Video documentation of artistic processes",
+          products: [
+            {
+              id: 6001,
+              name: "Kerala Mural Painting Process",
+              artist: "Master Muralist Studio",
+              info: "Video Documentation",
+              description: "Watch traditional Kerala mural artists at work using natural pigments and ancient techniques. From pigment preparation to the intricate brushwork that brings divine stories to life, this documentation captures the meditative and precise nature of this heritage art form.",
+              specs: ["Video Documentation", "Natural Pigments", "Traditional Technique", "Duration: 8-10 min"],
+              origin: "Kerala, South India",
+              media: [
+                { type: "video", icon: "🎬", src: "https://www.facebook.com/reel/1263187195895567/", caption: "Creative Process", captionPosition: "header" },
+                { type: "image", icon: "🎨", src: "static/img/image1.jpg", caption: "Still from studio", captionPosition: "footer" }
               ]
             },
             {
-              id: 4012,
-              name: "Chromatic Journey",
-              artist: "Maya Krishnan",
-              info: "Dyed Silk & Embroidery, 2023",
-              description: "A luxurious piece combining hand-dyed silk with intricate embroidery work. The flowing colors and textured surface create depth and movement.",
-              specs: ["Silk & Thread", "120cm × 180cm", "Framed", "Fiber Art"],
+              id: 6002,
+              name: "Pichwai Painting Technique",
+              artist: "Traditional Pichwai Master",
+              info: "Video Documentation",
+              description: "Discover the detailed techniques of creating pichwai paintings - hierarchical composition, layering of colors, and the spiritual intention behind each brushstroke. See how master artists build narratives through traditional Indian art methods.",
+              specs: ["Video Documentation", "Heritage Technique", "Narrative Painting", "Duration: 10-12 min"],
+              origin: "Rajasthan/Mathura Tradition",
               media: [
-                { type: "image", icon: "🧵", caption: "Complete work", captionPosition: "footer" },
-                { type: "image", icon: "🧶", caption: "Embroidery detail", captionPosition: "footer" },
-                { type: "video", icon: "🎬", caption: "Material texture", captionPosition: "header" }
+                { type: "video", icon: "🎬", src: "https://www.facebook.com/reel/1255181889364326/", caption: "Artistic Technique", captionPosition: "header" },
+                { type: "image", icon: "🖌️", src: "static/img/image3.jpg", caption: "Artist at work", captionPosition: "footer" }
+              ]
+            },
+            {
+              id: 6003,
+              name: "Hand-Embroidery Workshop",
+              artist: "Textile Arts Collective",
+              info: "Video Documentation",
+              description: "Experience the intricate work of hand-embroidery artisans. See how colorful threads transform plain fabrics into vibrant tapestries through traditional stitching techniques passed down through generations.",
+              specs: ["Video Documentation", "Hand-Embroidery", "Traditional Methods", "Duration: 7-9 min"],
+              origin: "South India",
+              media: [
+                { type: "video", icon: "🎬", src: "https://www.facebook.com/reel/900527049328825/", caption: "Embroidery Workshop", captionPosition: "header" },
+                { type: "image", icon: "🧵", src: "static/img/image9.jpg", caption: "Thread work detail", captionPosition: "footer" }
               ]
             }
           ]

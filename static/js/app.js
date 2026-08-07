@@ -192,10 +192,54 @@
     el.textContent = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
   }
 
-  /* ---------- Icon frame helper ---------- */
-  function iconFrame(icon){
+  /* ---------- Icon / photo frame helper ----------
+     Pass a plain emoji string to get the old glowing-icon look, or an
+     object like { icon: "🎨", src: "static/img/sunset-harmony.jpg" } to
+     show a real photo instead. If the photo fails to load (missing
+     file, bad path) it quietly falls back to the emoji. */
+  function iconFrame(iconOrObj){
+    const icon = (iconOrObj && typeof iconOrObj === 'object') ? iconOrObj.icon : iconOrObj;
+    const src  = (iconOrObj && typeof iconOrObj === 'object') ? iconOrObj.src  : null;
+    if (src){
+      return `<img class="glow-photo" src="${src}" alt="" loading="lazy"
+                onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'glow-icon',textContent:'${icon || ''}'}))">`;
+    }
     return `<span class="glow-icon" aria-hidden="true">${icon}</span>`;
   }
+
+  /* ---------- Card grid column sizing ----------
+     Fills each row with as many cards as fit at the fixed card size
+     (minCardWidth–maxCardWidth), wrapping to additional rows as needed —
+     so the grid uses the full row width instead of leaving space empty,
+     while keeping every card the same size regardless of item count. */
+  const gridColumnState = new Map();
+  function applyGridColumns(gridEl, count){
+    if (!gridEl || !count) return;
+    gridColumnState.set(gridEl.id, count);
+
+    const minCardWidth = 120; // floor so columns never get too cramped on narrow screens
+    const maxCardWidth = 155; // ceiling so a low item count doesn't blow cards up to fill the row
+    const gap = 14;
+    const containerWidth = gridEl.clientWidth || window.innerWidth;
+    const maxFit = Math.max(1, Math.floor((containerWidth + gap) / (minCardWidth + gap)));
+    const cols = Math.min(count, maxFit);
+
+    // minmax(..., maxCardWidth) instead of 1fr keeps cards capped at a fixed
+    // size even when there are only a couple of items to lay out; leftover
+    // row space stays blank (justify-content:start in CSS) rather than
+    // stretching the cards.
+    gridEl.style.gridTemplateColumns = `repeat(${cols}, minmax(${minCardWidth}px, ${maxCardWidth}px))`;
+  }
+
+  let gridResizeTimer = null;
+  window.addEventListener('resize', () => {
+    clearTimeout(gridResizeTimer);
+    gridResizeTimer = setTimeout(() => {
+      gridColumnState.forEach((count, id) => {
+        applyGridColumns(document.getElementById(id), count);
+      });
+    }, 150);
+  });
 
   /* ---------- Grid page indicator ---------- */
   const boundPagers = new Set();
@@ -255,9 +299,8 @@
         const count = group.categories.length;
         card.title = group.tagline;
         card.innerHTML = `
-          <div class="gcard-media" data-tone="${i % 8}">${iconFrame(group.icon)}</div>
-          <div class="gcard-scrim"></div>
-          <div class="gcard-body">
+          <div class="gcard-media" data-tone="${i % 8}">${iconFrame({ icon: group.icon, src: group.photo })}</div>
+          <div class="gcard-footer">
             <div class="gcard-badge" aria-hidden="true">${group.icon}</div>
             <div class="gcard-text">
               <div class="gcard-title">${group.name}</div>
@@ -268,6 +311,7 @@
         attachRipple(card);
         grid.appendChild(card);
       });
+      applyGridColumns(grid, this.data.groups.length);
       Reveal.scan();
       initGridPager('groups', 'groupsPager', Math.ceil(this.data.groups.length / 3));
     },
@@ -286,9 +330,8 @@
         card.className = 'gcard reveal-scale';
         card.style.setProperty('--d', (i % 8) * 0.05 + 's');
         card.innerHTML = `
-          <div class="gcard-media" data-tone="${i % 8}">${iconFrame(cat.icon)}</div>
-          <div class="gcard-scrim"></div>
-          <div class="gcard-body">
+          <div class="gcard-media" data-tone="${i % 8}">${iconFrame({ icon: cat.icon, src: cat.photo })}</div>
+          <div class="gcard-footer">
             <div class="gcard-badge" aria-hidden="true">${cat.icon}</div>
             <div class="gcard-text">
               <div class="gcard-title">${cat.name}</div>
@@ -298,6 +341,7 @@
         attachRipple(card);
         grid.appendChild(card);
       });
+      applyGridColumns(grid, group.categories.length);
       Reveal.scan();
       initGridPager('categories', 'categoriesPager', Math.ceil(group.categories.length / 3));
       ScreenNav.navigateTo('categories');
@@ -364,6 +408,9 @@
       document.getElementById('productDesc').textContent = product.description;
       document.getElementById('productCount').textContent = `${Gallery.state.productIndex + 1} / ${category.products.length}`;
 
+      // Randomly show the photo above or below the name/description for this product.
+      document.querySelector('.showcase-grid')?.classList.toggle('text-first', Math.random() < 0.5);
+
       const specRow = document.getElementById('specRow');
       specRow.innerHTML = '';
       product.specs?.forEach(spec => {
@@ -383,7 +430,10 @@
       product.media.forEach((m, i) => {
         const slide = document.createElement('div');
         slide.className = 'media-slide' + (i === 0 ? ' active' : '');
-        slide.innerHTML = `<div class="media-icon">${m.icon}</div>`;
+        slide.innerHTML = m.src
+          ? `<img class="media-photo" src="${m.src}" alt="${m.caption || ''}" loading="lazy"
+                onerror="this.outerHTML='<div class=&quot;media-icon&quot;>${m.icon || ''}</div>'">`
+          : `<div class="media-icon">${m.icon}</div>`;
         stage.insertBefore(slide, document.getElementById('mediaCaptionFooter'));
       });
 
