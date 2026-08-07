@@ -392,7 +392,7 @@
     currentProduct: null,
     segmentDuration: 0,
     segmentStart: 0,
-    durations: { image: 3200, video: 5200 },
+    durations: { image: 5000, video: 5200 },
 
     load(){
       clearTimeout(this.timer);
@@ -588,7 +588,7 @@
     Gallery.init(GALLERY_DATA);
     
     tickClock();
-    setInterval(tickClock, 2000);
+    setInterval(tickClock, 8000);
   });
 
 })();

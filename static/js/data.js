@@ -18,7 +18,7 @@ const GALLERY_DATA = {
       id: 1,
       name: "Kerala Mural Art",
       icon: "🎨",
-      photo: "static/img/image8.jpg",
+      photo: "static/img/mural.png",
       tagline: "Traditional Kerala murals and Kathakali-inspired paintings",
       description: "Experience the rich heritage of Kerala's ancient mural tradition. Our collection showcases traditional narratives rendered with natural pigments and authentic techniques, celebrating divine stories and mythological tales.",
       color: "#8B4513",
@@ -38,9 +38,9 @@ const GALLERY_DATA = {
               specs: ["Natural Pigments", "100cm × 140cm", "Gallery Mount", "Museum Quality"],
               origin: "Kerala, South India",
               media: [
-                { type: "image", icon: "🎨", src: "static/img/image.png", caption: "Main composition", captionPosition: "footer" },
-                { type: "image", icon: "🎭", caption: "Detail: Facial expressions & ornaments", captionPosition: "footer" },
-                { type: "video", icon: "🎬", src: "https://www.facebook.com/reel/1263187195895567/", caption: "Artist's Process", captionPosition: "header" }
+                { type: "image", icon: "🎨", src: "static/img/image.png",  captionPosition: "footer" },
+                { type: "image", icon: "🎭",  captionPosition: "footer" },
+                { type: "video", icon: "🎬", src: "https://www.facebook.com/reel/1263187195895567/", captionPosition: "header" }
               ]
             },
             {
@@ -52,9 +52,9 @@ const GALLERY_DATA = {
               specs: ["Natural Pigments", "120cm × 150cm", "Professional Mount", "Heritage Art"],
               origin: "Kerala, South India",
               media: [
-                { type: "image", icon: "🎨", src: "static/img/image2.jpg", caption: "Full composition", captionPosition: "footer" },
-                { type: "image", icon: "👑", caption: "Ornate crown detail", captionPosition: "footer" },
-                { type: "video", icon: "🎬", src: "https://www.facebook.com/reel/1255181889364326/", caption: "Creative Process", captionPosition: "header" }
+                { type: "image", icon: "🎨", src: "static/img/image2.jpg",  captionPosition: "footer" },
+                { type: "image", icon: "👑",  captionPosition: "footer" },
+                { type: "video", icon: "🎬", src: "https://www.facebook.com/reel/1255181889364326/",  captionPosition: "header" }
               ]
             },
             {
@@ -66,8 +66,8 @@ const GALLERY_DATA = {
               specs: ["Traditional Medium", "90cm × 130cm", "Canvas Mount", "Authentic Technique"],
               origin: "Kerala, South India",
               media: [
-                { type: "image", icon: "🎭", src: "static/img/image.png", caption: "Character study", captionPosition: "footer" },
-                { type: "image", icon: "💚", caption: "Green face detail", captionPosition: "footer" }
+                { type: "image", icon: "🎭", src: "static/img/image.png",  captionPosition: "footer" },
+                { type: "image", icon: "💚",  captionPosition: "footer" }
               ]
             }
           ]
@@ -87,9 +87,9 @@ const GALLERY_DATA = {
               specs: ["Natural Pigments", "140cm × 200cm", "Museum Grade Mount", "Heritage Masterpiece"],
               origin: "Rajasthan/Mathura Tradition",
               media: [
-                { type: "image", icon: "🕉️", src: "static/img/image3.jpg", caption: "Complete narrative", captionPosition: "footer" },
-                { type: "image", icon: "✨", caption: "Celestial beings detail", captionPosition: "footer" },
-                { type: "video", icon: "🎬", caption: "Artistic documentation", captionPosition: "header" }
+                { type: "image", icon: "🕉️", src: "static/img/image3.jpg",  captionPosition: "footer" },
+                { type: "image", icon: "✨",  captionPosition: "footer" },
+                { type: "video", icon: "🎬",  captionPosition: "header" }
               ]
             }
           ]
@@ -120,9 +120,9 @@ const GALLERY_DATA = {
               specs: ["Wood Base", "Hand-Painted", "Peacock Feather Crown", "Precious Stones", "Height: 35cm"],
               origin: "South India",
               media: [
-                { type: "image", icon: "💙", src: "static/img/image4.jpg", caption: "Complete figurine", captionPosition: "footer" },
-                { type: "image", icon: "👑", caption: "Ornate crown & feather", captionPosition: "footer" },
-                { type: "image", icon: "✨", caption: "Jewelry details", captionPosition: "footer" }
+                { type: "image", icon: "💙", src: "static/img/image4.jpg",  captionPosition: "footer" },
+                { type: "image", icon: "👑",  captionPosition: "footer" },
+                { type: "image", icon: "✨",  captionPosition: "footer" }
               ]
             }
           ]
@@ -142,9 +142,9 @@ const GALLERY_DATA = {
               specs: ["Hand-Carved Wood", "Mixed Paint", "Rope Detailing", "Height: 25cm", "Decorative/Functional"],
               origin: "South India",
               media: [
-                { type: "image", icon: "🦉", src: "static/img/image5.jpg", caption: "Full sculpture", captionPosition: "footer" },
-                { type: "image", icon: "👀", caption: "Owl face detail", captionPosition: "footer" },
-                { type: "image", icon: "🍃", caption: "Leaf carving detail", captionPosition: "footer" }
+                { type: "image", icon: "🦉", src: "static/img/image5.jpg",  captionPosition: "footer" },
+                { type: "image", icon: "👀",  captionPosition: "footer" },
+                { type: "image", icon: "🍃",  captionPosition: "footer" }
               ]
             },
             {
@@ -156,8 +156,8 @@ const GALLERY_DATA = {
               specs: ["Terracotta Base", "Sculpted Grapes", "Painted Leaves", "Height: 28cm", "Wall Mountable"],
               origin: "South India",
               media: [
-                { type: "image", icon: "🍇", src: "static/img/image6.jpg", caption: "Complete bottle art", captionPosition: "footer" },
-                { type: "image", icon: "🍃", caption: "Grape cluster detail", captionPosition: "footer" }
+                { type: "image", icon: "🍇", src: "static/img/image6.jpg",  captionPosition: "footer" },
+                { type: "image", icon: "🍃",  captionPosition: "footer" }
               ]
             }
           ]
@@ -188,8 +188,8 @@ const GALLERY_DATA = {
               specs: ["Terracotta", "Hand-Painted Dots", "Black Base", "Height: 30cm", "Decorative Vessel"],
               origin: "South India - Traditional Technique",
               media: [
-                { type: "image", icon: "🎭", src: "static/img/image7.jpg", caption: "Mask face design", captionPosition: "footer" },
-                { type: "image", icon: "⭕", caption: "Dot pattern detail", captionPosition: "footer" }
+                { type: "image", icon: "🎭", src: "static/img/image7.jpg",  captionPosition: "footer" },
+                { type: "image", icon: "⭕",  captionPosition: "footer" }
               ]
             },
             {
@@ -201,8 +201,8 @@ const GALLERY_DATA = {
               specs: ["Black Wood/Material Base", "Colorful Dots", "Dome Lid", "Diameter: 25cm", "Storage Box"],
               origin: "India",
               media: [
-                { type: "image", icon: "⭕", src: "static/img/image15.jpg", caption: "Complete mandala design", captionPosition: "footer" },
-                { type: "image", icon: "🎨", caption: "Color dot detail", captionPosition: "footer" }
+                { type: "image", icon: "⭕", src: "static/img/image15.jpg",  captionPosition: "footer" },
+                { type: "image", icon: "🎨",  captionPosition: "footer" }
               ]
             }
           ]
@@ -222,8 +222,8 @@ const GALLERY_DATA = {
               specs: ["Terracotta", "Hand-Painted", "Yellow Base", "Blue Patterns", "Diameter: 15cm"],
               origin: "South India",
               media: [
-                { type: "image", icon: "🌼", src: "static/img/image11.jpg", caption: "Full pot design", captionPosition: "footer" },
-                { type: "image", icon: "🍃", caption: "Fern leaf pattern", captionPosition: "footer" }
+                { type: "image", icon: "🌼", src: "static/img/image11.jpg", captionPosition: "footer" },
+                { type: "image", icon: "🍃",  captionPosition: "footer" }
               ]
             },
             {
@@ -235,8 +235,8 @@ const GALLERY_DATA = {
               specs: ["Terracotta", "Hand-Painted Florals", "Cream Base", "Butterfly Design", "Diameter: 18cm"],
               origin: "India",
               media: [
-                { type: "image", icon: "🌸", src: "static/img/image14.jpg", caption: "Complete pot with plant", captionPosition: "footer" },
-                { type: "image", icon: "🦋", caption: "Floral detail", captionPosition: "footer" }
+                { type: "image", icon: "🌸", src: "static/img/image14.jpg",  captionPosition: "footer" },
+                { type: "image", icon: "🦋",  captionPosition: "footer" }
               ]
             }
           ]
@@ -267,9 +267,9 @@ const GALLERY_DATA = {
               specs: ["Hand-Embroidered", "Cotton Base", "Multicolor Thread", "100cm × 80cm", "Wall Hanging/Mat"],
               origin: "South India - Traditional Embroidery",
               media: [
-                { type: "image", icon: "🌸", src: "static/img/image9.jpg", caption: "Complete composition", captionPosition: "footer" },
-                { type: "image", icon: "👩", caption: "Figure detail", captionPosition: "footer" },
-                { type: "image", icon: "🌼", caption: "Floral embroidery", captionPosition: "footer" }
+                { type: "image", icon: "🌸", src: "static/img/image9.jpg",  captionPosition: "footer" },
+                { type: "image", icon: "👩",  captionPosition: "footer" },
+                { type: "image", icon: "🌼",  captionPosition: "footer" }
               ]
             },
             {
@@ -281,8 +281,8 @@ const GALLERY_DATA = {
               specs: ["Hand-Embroidered", "Canvas Base", "3D Elements", "120cm × 100cm", "Art Piece"],
               origin: "India",
               media: [
-                { type: "image", icon: "🌸", src: "static/img/image10.jpg", caption: "Full embroidered design", captionPosition: "footer" },
-                { type: "image", icon: "💜", caption: "Purple flower detail", captionPosition: "footer" }
+                { type: "image", icon: "🌸", src: "static/img/image10.jpg",  captionPosition: "footer" },
+                { type: "image", icon: "💜",  captionPosition: "footer" }
               ]
             }
           ]
@@ -313,8 +313,8 @@ const GALLERY_DATA = {
               specs: ["Ceramic", "Hand-Painted", "White Base", "Pink Accents", "Height: 15cm"],
               origin: "South India",
               media: [
-                { type: "image", icon: "😊", src: "static/img/image12.jpg", caption: "Complete planter", captionPosition: "footer" },
-                { type: "image", icon: "👁️", caption: "Face detail", captionPosition: "footer" }
+                { type: "image", icon: "😊", src: "static/img/image12.jpg",  captionPosition: "footer" },
+                { type: "image", icon: "👁️",  captionPosition: "footer" }
               ]
             },
             {
@@ -326,8 +326,8 @@ const GALLERY_DATA = {
               specs: ["Ceramic", "Paired Set", "Hand-Painted", "White Base", "Height: 15-18cm each"],
               origin: "India",
               media: [
-                { type: "image", icon: "😊", caption: "Serene face", captionPosition: "footer" },
-                { type: "image", icon: "😲", caption: "Alert face", captionPosition: "footer" }
+                { type: "image", icon: "😊", captionPosition: "footer" },
+                { type: "image", icon: "😲",  captionPosition: "footer" }
               ]
             }
           ]
@@ -347,8 +347,8 @@ const GALLERY_DATA = {
               specs: ["Glass Bottles", "Hand-Decoupaged", "Floral Design", "Rope Details", "Set of 4"],
               origin: "South India",
               media: [
-                { type: "image", icon: "🌸", src: "static/img/image13.jpg", caption: "Complete bottle collection", captionPosition: "footer" },
-                { type: "image", icon: "🌹", caption: "Floral detail", captionPosition: "footer" }
+                { type: "image", icon: "🌸", src: "static/img/image13.jpg",  captionPosition: "footer" },
+                { type: "image", icon: "🌹", captionPosition: "footer" }
               ]
             }
           ]
@@ -378,8 +378,8 @@ const GALLERY_DATA = {
               specs: ["Video Documentation", "Natural Pigments", "Traditional Technique", "Duration: 8-10 min"],
               origin: "Kerala, South India",
               media: [
-                { type: "video", icon: "🎬", src: "https://www.facebook.com/reel/1263187195895567/", caption: "Creative Process", captionPosition: "header" },
-                { type: "image", icon: "🎨", src: "static/img/image.png", caption: "Still from studio", captionPosition: "footer" }
+                { type: "video", icon: "🎬", src: "www.facebook.com/reel/1263187195895567/", captionPosition: "header" },
+                { type: "image", icon: "🎨", src: "static/img/image.png", captionPosition: "footer" }
               ]
             },
             {
@@ -391,8 +391,8 @@ const GALLERY_DATA = {
               specs: ["Video Documentation", "Heritage Technique", "Narrative Painting", "Duration: 10-12 min"],
               origin: "Rajasthan/Mathura Tradition",
               media: [
-                { type: "video", icon: "🎬", src: "https://www.facebook.com/reel/1255181889364326/", caption: "Artistic Technique", captionPosition: "header" },
-                { type: "image", icon: "🖌️", src: "static/img/image3.jpg", caption: "Artist at work", captionPosition: "footer" }
+                { type: "video", icon: "🎬", src: "https://www.facebook.com/reel/1255181889364326/",  captionPosition: "header" },
+                { type: "image", icon: "🖌️", src: "static/img/image3.jpg", captionPosition: "footer" }
               ]
             },
             {
@@ -404,8 +404,8 @@ const GALLERY_DATA = {
               specs: ["Video Documentation", "Hand-Embroidery", "Traditional Methods", "Duration: 7-9 min"],
               origin: "South India",
               media: [
-                { type: "video", icon: "🎬", src: "https://www.facebook.com/reel/900527049328825/", caption: "Embroidery Workshop", captionPosition: "header" },
-                { type: "image", icon: "🧵", src: "/static/img/image9.jpg", caption: "Thread work detail", captionPosition: "footer" }
+                { type: "video", icon: "🎬", src: "https://www.facebook.com/reel/900527049328825/", captionPosition: "header" },
+                { type: "image", icon: "🧵", src: "/static/img/image9.jpg",  captionPosition: "footer" }
               ]
             }
           ]
