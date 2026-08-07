@@ -18,7 +18,7 @@ const GALLERY_DATA = {
       id: 1,
       name: "Kerala Mural Art",
       icon: "🎨",
-      photo: "static/img/kerala-mural-cover.jpg",
+      photo: "static/img/image8.jpg",
       tagline: "Traditional Kerala murals and Kathakali-inspired paintings",
       description: "Experience the rich heritage of Kerala's ancient mural tradition. Our collection showcases traditional narratives rendered with natural pigments and authentic techniques, celebrating divine stories and mythological tales.",
       color: "#8B4513",
@@ -38,7 +38,7 @@ const GALLERY_DATA = {
               specs: ["Natural Pigments", "100cm × 140cm", "Gallery Mount", "Museum Quality"],
               origin: "Kerala, South India",
               media: [
-                { type: "image", icon: "🎨", src: "static/img/image1.jpg", caption: "Main composition", captionPosition: "footer" },
+                { type: "image", icon: "🎨", src: "static/img/image.png", caption: "Main composition", captionPosition: "footer" },
                 { type: "image", icon: "🎭", caption: "Detail: Facial expressions & ornaments", captionPosition: "footer" },
                 { type: "video", icon: "🎬", src: "https://www.facebook.com/reel/1263187195895567/", caption: "Artist's Process", captionPosition: "header" }
               ]
@@ -66,7 +66,7 @@ const GALLERY_DATA = {
               specs: ["Traditional Medium", "90cm × 130cm", "Canvas Mount", "Authentic Technique"],
               origin: "Kerala, South India",
               media: [
-                { type: "image", icon: "🎭", src: "static/img/image1.jpg", caption: "Character study", captionPosition: "footer" },
+                { type: "image", icon: "🎭", src: "static/img/image.png", caption: "Character study", captionPosition: "footer" },
                 { type: "image", icon: "💚", caption: "Green face detail", captionPosition: "footer" }
               ]
             }
@@ -100,7 +100,7 @@ const GALLERY_DATA = {
       id: 2,
       name: "Handcrafted Sculptures & Carvings",
       icon: "🗿",
-      photo: "static/img/sculptures-cover.jpg",
+      photo: "static/img/sculptures-cover.png",
       tagline: "Intricate wood carvings and decorative sculptures",
       description: "Discover the artistry of traditional Indian sculpture. From divine figurines to nature-inspired wooden carvings, each piece showcases exceptional craftsmanship and attention to detail.",
       color: "#654321",
@@ -168,7 +168,7 @@ const GALLERY_DATA = {
       id: 3,
       name: "Decorated Vessels & Pottery",
       icon: "🏺",
-      photo: "static/img/pottery-cover.jpg",
+      photo: "static/img/pottery-cover.png",
       tagline: "Hand-painted pots, bowls, and decorative containers",
       description: "Traditional and contemporary pottery featuring intricate hand-painted designs. Each vessel is a functional artwork celebrating Indian cultural motifs and artistic heritage.",
       color: "#B8860B",
@@ -247,7 +247,7 @@ const GALLERY_DATA = {
       id: 4,
       name: "Textile & Embroidery Art",
       icon: "🧵",
-      photo: "static/img/textile-cover.jpg",
+      photo: "static/img/textile-cover.png",
       tagline: "Hand-embroidered fabrics and woven textiles",
       description: "Celebrate traditional textile arts featuring intricate hand-embroidery, colorful thread work, and cultural symbolism. Each piece tells stories through fabric and thread.",
       color: "#9932CC",
@@ -293,7 +293,7 @@ const GALLERY_DATA = {
       id: 5,
       name: "Home Decor Accessories",
       icon: "✨",
-      photo: "static/img/decor-cover.jpg",
+      photo: "static/img/decor-cover.png",
       tagline: "Functional art for modern homes",
       description: "Transform your living space with handcrafted home accessories that blend traditional artistry with contemporary design. Each piece serves as both decoration and a conversation starter.",
       color: "#FF69B4",
@@ -379,7 +379,7 @@ const GALLERY_DATA = {
               origin: "Kerala, South India",
               media: [
                 { type: "video", icon: "🎬", src: "https://www.facebook.com/reel/1263187195895567/", caption: "Creative Process", captionPosition: "header" },
-                { type: "image", icon: "🎨", src: "static/img/image1.jpg", caption: "Still from studio", captionPosition: "footer" }
+                { type: "image", icon: "🎨", src: "static/img/image.png", caption: "Still from studio", captionPosition: "footer" }
               ]
             },
             {
@@ -405,7 +405,7 @@ const GALLERY_DATA = {
               origin: "South India",
               media: [
                 { type: "video", icon: "🎬", src: "https://www.facebook.com/reel/900527049328825/", caption: "Embroidery Workshop", captionPosition: "header" },
-                { type: "image", icon: "🧵", src: "static/img/image9.jpg", caption: "Thread work detail", captionPosition: "footer" }
+                { type: "image", icon: "🧵", src: "/static/img/image9.jpg", caption: "Thread work detail", captionPosition: "footer" }
               ]
             }
           ]

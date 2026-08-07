@@ -588,7 +588,7 @@
     Gallery.init(GALLERY_DATA);
     
     tickClock();
-    setInterval(tickClock, 1000);
+    setInterval(tickClock, 2000);
   });
 
 })();
