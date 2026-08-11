@@ -89,7 +89,7 @@ const GALLERY_DATA = {
               media: [
                 { type: "image", icon: "🕉️", src: "static/img/image3.jpg",  captionPosition: "footer" },
                 { type: "image", icon: "✨",  captionPosition: "footer" },
-                { type: "video", icon: "🎬",  captionPosition: "header" }
+                { type: "video", icon: "🎬",  captionPosition: "footer" }
               ]
             }
           ]

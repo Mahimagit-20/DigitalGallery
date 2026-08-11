@@ -55,7 +55,7 @@
         if (this.currentScreen === 'welcome'){
           this.navigateTo('groups');
         }
-      }, 1000);
+      }, 2000);
     },
 
     setupScreenButtons(){
@@ -208,14 +208,23 @@
   }
 
   /* ---------- Card grid column sizing ----------
-     Fills each row with as many cards as fit at the fixed card size
-     (minCardWidth–maxCardWidth), wrapping to additional rows as needed —
-     so the grid uses the full row width instead of leaving space empty,
-     while keeping every card the same size regardless of item count. */
+     Tablet and up (≥768px): handled entirely by CSS (repeat(auto-fit, ...))
+     so the column count adapts continuously to the available width across
+     tablet/laptop/desktop — no JS involved, so it can't misfire from being
+     measured before layout has settled.
+     Below that (phones): fills each row with as many cards as fit at the
+     fixed card size, wrapping to more rows as needed. */
   const gridColumnState = new Map();
   function applyGridColumns(gridEl, count){
     if (!gridEl || !count) return;
     gridColumnState.set(gridEl.id, count);
+
+    if (window.innerWidth >= 768){
+      // Clear any inline override left from a narrower viewport so the
+      // stylesheet's auto-fit rule takes over.
+      gridEl.style.gridTemplateColumns = '';
+      return;
+    }
 
     const minCardWidth = 120; // floor so columns never get too cramped on narrow screens
     const maxCardWidth = 155; // ceiling so a low item count doesn't blow cards up to fill the row
@@ -257,16 +266,15 @@
 
     const update = () => {
       const liveDots = pager.querySelectorAll('.nav-dot');
-      const rect = section.getBoundingClientRect();
-      const scrollable = rect.height - window.innerHeight;
-      const progress = scrollable > 0 ? Math.min(1, Math.max(0, -rect.top / scrollable)) : 0;
+      const scrollable = section.scrollHeight - section.clientHeight;
+      const progress = scrollable > 0 ? Math.min(1, Math.max(0, section.scrollTop / scrollable)) : 0;
       const idx = Math.min(dotCount - 1, Math.floor(progress * dotCount));
       liveDots.forEach((d, i) => d.classList.toggle('active', i === idx));
     };
     update();
 
     if (!boundPagers.has(sectionId)){
-      window.addEventListener('scroll', update, { passive: true });
+      section.addEventListener('scroll', update, { passive: true });
       boundPagers.add(sectionId);
     }
   }
